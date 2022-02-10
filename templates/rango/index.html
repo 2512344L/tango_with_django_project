@@ -6,14 +6,19 @@ Homepage
 {% endblock %}
 
 {% block body_block %}
-<h1>Rango says...</h1>
-    {% if user.is_authenticated %}
-    howdy {{ user.username }}!
-  {% else %}
-    hey there partner!
-  {% endif %}
+    <div>
+        <h1>Rango says...</h1>
+        {% if user.is_authenticated %}
+            howdy {{ user.username }}!
+        {% else %}
+            hey there partner!
+        {% endif %}
+         {% if visits %}
+            <p>visits: {{ visits }}</p>
+         {% endif %}
+    </div>
+
 <div>
-    hey there partner!<br/>
     <strong>{{ boldmessage }}</strong><br/>
 </div>
 
