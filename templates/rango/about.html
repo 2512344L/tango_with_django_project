@@ -12,6 +12,9 @@
     <div>
         here is about page<br/>
         {{ text }}<br/>
+      {% if visits %}
+            <p>Visits: {{ visits }}</p>
+      {% endif %}
     </div>
     <div>
         <img src="/static/images/rango.jpg"
